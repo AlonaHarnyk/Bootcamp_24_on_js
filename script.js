@@ -1,316 +1,234 @@
-// const a = [1, 2, 3, 4, 5]
-// // for(let i = 0; i < a.length; i+=1) {
-// //     console.log(a[i] + 10)
-// // }
+//   const book = {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     isPublic: false,
+//     rating: 0,
+//     data: {
+//         a: 1,
+//         b: 2, 
+//         c: 3
+//     }
+//   };
 
-// for(const elem of a) {
-//     console.log(elem + 10)
-// }
+//   console.log(book)
 
-// const array1 = [1, 2, 3];
-// const array2 = array1;
+// const authorName = 'author';
 
-// // console.log(array1)
-// // console.log(array2)
+// const a = book.title
+// //  console.log(book.genres)
+// //  console.log(book['genres']);
+// console.log(book.name) // undefined
+// console.log(book[b])
 
-// array1[0] = 10;
+// book.isPublic = true;
 
-// // console.log(array1)
-// // console.log(array2);
+// // // console.log(book)
+// book.genres.push('tale')
+// console.log(book)
 
-// array2[2] = 5;
+// book.price = '10$'
 
-// // console.log(array1)
+// console.log(book)
 
-// const array3 = array2
+// const name = "Генрі Сибола";
+// const age = 25;
 
-// // console.log(array3)
+// const user = {
+//   name: name,
+//   age: age,
+// };
 
-// array3[1] = 100;
-
-// // console.log(array1)
-
-// array2.length = 0;
-
-// console.log(array3)
-
-// array1[2] = 1000;
-// console.log(array3)
-// console.log(array3.length)
-
-// let array1 = [1, 3, 5]
-// let array2 = array1;
-
-// array1[0] = 50;
-// // console.log(array2)
-
-// array1 = [9, 90, 900]
-
-// array2 = array1;
-
-// console.log(array1)
-// console.log(array2)
-
-// const string = '1-!2-!3-!4-!5-!6-!7-!8-!9'
-
-// console.log(string.split('!'))
-
-// const string2 = '123456789'
-
-// const array = string2.split('')
-
-// console.log(array)
-
-// const newArray = []
-// for(const el of array) {
-//     const number = Number(el);
-//     newArray.push(number)
-// }
-// console.log(newArray)
-
-// const array2 = [1, '2', 3, '4', 5, '6']
-
-// const newArray2 = [];
-
-// for(const el of array2){
-//     if(typeof el === 'number') {
-//         newArray2.push(String(el))
-//     } else {
-//         newArray2.push(Number(el))
+// const student = {
+//     name: 'Jhon',
+//     email: 'jhon@gmail.com',
+//     homeworkResults: [],
+//     getName() {
+//         console.log(this.name)
+//     },
+//     getEmail() {
+//         console.log(this.email)
+//     },
+//     getHWResults() {
+//         console.log(this.homeworkResults)
+//     },
+//     addHomeworkResults(topic, sucess) {
+//         const item = {topic, sucess}
+//         this.homeworkResults.push(item)
 //     }
 // }
 
-// console.log(newArray2)
+// student.getName()
+// student.getEmail()
+// student.getHWResults()
+// student.addHomeworkResults('HTML/CSS', true)
+// student.getHWResults()
+// student.addHomeworkResults('JS', true)
+// student.getHWResults()
 
-// const array3 = [1, 2, 3, 4, 5, 6, 7];
-// const string3 = array3.join('***')
-// console.log(string3)
-
-// const array4 = [1, 2, 3, 4, 2, 5, 6, 7, 2]
-
-// const indexArray = [];
-
-// for(let i = 0; i < array4.length; i+=1){
-//     if(array4[i] === 2) {
-//         indexArray.push(i)
-//     }
-// }
-
-// console.log(indexArray)
-// const array5 = [1,4,6,7,4,7,89]
-// const res1 = array5.includes(100 && 4)
-// const res2 = array5.includes(100) && array5.includes(4)
-// console.log(res2)
-
-// const numbers = [];
-
-// const x = numbers.push(5)
-// const y = numbers.push(50, 100)
-// // console.log(numbers)
-// // console.log(y)
-// const z = numbers.pop()
-// console.log(numbers)
-// console.log(z)
-
-// const a = [1, 2, 3];
-// const b = [5, [6,7]]
-// const c = 4
-// const d = [b[0]].concat(b[1])
-// // console.log(d)
-// // [1, 2, 3, 4, 5, 6, 7]
-
-// const result = a.concat(c, d)
-
-// console.log(a)
-
-// console.log(result)
-
-// const array6 = [1, 2, 3, 4, 5, 6, 7]
-// const array7 = array6.slice(0, 5)
-// const array8 = array6.slice(-2)
-// array6.push(1000)
-// console.log(array8)
-
-// const numbers2 = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9]
-// const numbers3 = numbers2.slice()
-// const q = numbers3.splice(5, 2)
-// console.log(numbers2)
-// console.log(numbers3)
-// const numbers4 = numbers2.slice()
-// const e = numbers4.splice(1, 0, 1, 1)
-// console.log(e)
-// const numbers5 = numbers2.slice()
-// const u = numbers5.splice(7, 4, 5, 5, 5, 5)
-// console.log(u)
-
-// const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-// const letters2 = letters.slice()
-// // letters2.splice(3, 3, 'a', 'b', 'c')
-// // letters2.copyWithin(3, 0, 3)
-// // console.log(letters2)
-// letters2.fill('x', 3, 6)
-// console.log(letters2)
-
-// const numbers6 = [1, [2, 3], 4, 5, 6, [7, 8, [9, 10, [11, 12, [13, [14, 15]]]]]]
-// const newAr = numbers6.flat(Infinity)
-// console.log(newAr)
-
-// console.log(newAr.reverse())
-// const test = Array.from('1234567')
-// console.log(test)
-
-// const isArray = Array.isArray([1, 2, 3])
-// console.log(isArray)
-
-// function isIncluded(array, number) {
-//     const result = array.includes(number)
-//     console.log(result)
-// }
-
-// isIncluded([1, 2, 5, 8, 3], 4) // false
-// isIncluded([1, 2, 5, 8, 3], 5) // true
-// isIncluded(5, [1, 3, 5]) // error
-
-// function isIncluded(array, number) {
-//     const result = array.includes(number)
-//     // console.log(result)
-//     return result
-//     // console.log(result)
-// }
-
-// console.log(isIncluded([1, 2, 5, 8, 3], 4)) // false
-// console.log(isIncluded([1, 2, 5, 8, 3], 5)) // true
-
-// const a = isIncluded([1, 2, 5, 8, 3], 4)
-// console.log(a)
-// const b = isIncluded([1, 2, 5, 8, 3], 5)
-// console.log(b)
-
-// function add(a, b) {
-//   // const sum = a + b
-//   // return sum
-
-//   return a + b;
-// }
-
-// const number1 = add(1, 3);
-// const number2 = add(5, 7);
-
-// const sum = number1 + number2
-
-// const sum = add(1, 3) + add(5, 7)
-// console.log(sum)
-
-// function add(a, b) {
-//     if(typeof a !== 'number' || typeof b !== 'number') {
-//         return 'One of operands is not a number'
-//         // return
-//     }
-//     return a + b
-// }
-
-// console.log(add(3, 7))
-// console.log(add( 5, '10'))
-
-// function add(a = 0, b = 0, c = 0) {
-//     console.log(a + b + c)
-// }
-
-// const num1 = 3;
-// const num2 = 4
-
-// add(num1, num2)
-// add(3)
-// add()
-
-// function add() {
-//     // console.log(arguments[1])
-//     // console.log(arguments.length)
-//     let sum = 0;
-//     for(const arg of arguments) {
-//         // console.log(arg)
-//         sum +=arg
-//     }
-//     console.log(sum)
-//     return sum
-// }
-
-// add(5, 7, 4, 9, 10)
-
-// function isIncluded() {
-//     const array = Array.from(arguments);
-//     console.log(array)
-//     const number = arguments[arguments.length - 1]
-//     console.log(number)
-//     const array2 = array.slice(0, -1)
-//     console.log(array2)
-//     console.log(array2.includes(number))
-//     return array2.includes(number)
-// }
-
-// function isIncluded(...array) {
-//     console.log(array)
-//     const number = arguments[arguments.length - 1]
-//     console.log(number)
-//     const array2 = array.slice(0, -1)
-//     console.log(array2)
-//     console.log(array2.includes(number))
-//     return array2.includes(number)
-// }
-
-// isIncluded(2, 5, 6, 8, 4, 9, 3, 7)
-
-// const add = function(a, b) {
-//     if(typeof a !== 'number' || typeof b !== 'number') {
-//         return 'One of operands is not a number'
-//         // return
-//     }
-//     return a + b
-// }
-
-// console.log(add(3, 7))
-// console.log(add( 5, '10'))
-
-// const a = 1;
-// console.log(a);
-// function logger() {
-//   const a = 2;
-//   // console.log(a)
-//   if (a === 2) {
-//     // const a = 3;
-//     // console.log(a)
-//     for (let i = 0; i <= 10; i += 1) {
-//       //   const a = 4;
-//       console.log(a);
-//       // console.log(a + i)
-//     }
-//   }
-// }
-
-// logger();
-
-// console.log(789)
-
-// function bar() {
-//     console.log("bar");
-//     console.log(789)
-//   }
+// const book = {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     rating: 8.38,
+//   };
   
-//   function baz() {
-//     console.log("baz");
-//     console.log(789)
+//   for (const key in book) {
+//     // // Ключ
+//     // console.log(key);
+//     // Значення властивості з таким ключем
+//     console.log(book[key]);
 //   }
-  
-//   function foo() {
-//     console.log("foo");
-//     bar();
-//     console.log(789)
-//     baz();
-//     console.log(123)
+
+// const animal = {
+//     legs: 4,
+//     color: 'brown'
+//   };
+// //   animal.eyes = 'green'
+//   const dog = Object.create(animal);
+
+// //   console.log(dog)
+// //   animal.eyes = 'green';
+//   dog.name = "Манго";
+//   dog.age = 7;
+//   dog.eyes = 'grey';
+//     console.log(dog)
+// //   dog.color = 'black';
+// // //   console.log(dog); // {name: 'Манго'}
+// // //   console.log(dog.name); // 'Манго'
+// //   console.log(dog.legs); // 4
+// //   console.log(dog.eyes) // 
+
+// for(const key in dog) {
+//     if (!dog.hasOwnProperty(key)) {
+//         console.log(key)
+//     }
+// }
+
+// const keys = Object.keys(dog)
+// console.log(keys)
+
+// const values = Object.values(dog)
+// console.log(values)
+
+// const entries = Object.entries(dog)
+// console.log(entries)
+
+const users = [
+    {
+      id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      eyeColor: "blue",
+      friends: ["Sharron Pace"],
+      isActive: false,
+      balance: 2811,
+      skills: ["ipsum", "lorem"],
+      gender: "male",
+      age: 37,
+    },
+    {
+      id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      eyeColor: "blue",
+      friends: ["Briana Decker", "Sharron Pace"],
+      isActive: true,
+      balance: 3821,
+      skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+      gender: "female",
+      age: 34,
+    },
+    {
+      id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      eyeColor: "green",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      isActive: false,
+      balance: 3793,
+      skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+      gender: "male",
+      age: 24,
+    },
+    {
+      id: "249b6175-5c30-44c6-b154-f120923736f5",
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      eyeColor: "green",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      isActive: true,
+      balance: 2278,
+      skills: ["adipisicing", "irure", "velit"],
+      gender: "female",
+      age: 21,
+    },
+    {
+      id: "334f8cb3-eb04-45e6-abf4-4935dd439b70",
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      eyeColor: "blue",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      isActive: true,
+      balance: 3951,
+      skills: ["ex", "culpa", "nostrud"],
+      gender: "male",
+      age: 27,
+    },
+    {
+      id: "150b00fb-dd82-427d-9faf-2879ea87c695",
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      eyeColor: "brown",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      isActive: false,
+      balance: 1498,
+      skills: ["non", "amet", "ipsum"],
+      gender: "male",
+      age: 38,
+    },
+    {
+      id: "e1bf46ab-7168-491e-925e-f01e21394812",
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      eyeColor: "brown",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      isActive: true,
+      balance: 2764,
+      skills: ["lorem", "veniam", "culpa"],
+      gender: "female",
+      age: 39,
+    },
+  ];
+
+  const dataObject = {};
+//   console.log(users[0])
+  const keys = Object.keys(users[0])
+//   console.log(keys)
+
+  for(const key of keys) {
+    console.log(key)
+    dataObject[key] = [];
+  }
+
+  console.log(dataObject)
+
+// for (const objKey in dataObject) {
+//   for(const user of users) {
+//     dataObject[objKey].push(user[objKey])
 //   }
-  
-//   foo();
+// }
 
-//   console.log(789)
-
+const u =  {
+    id: "e1bf46ab-7168-491e-925e-f01e21394812",
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    skills: ["lorem", "veniam", "culpa"],
+    gender: "female",
+    age: 39,
+  }
 
