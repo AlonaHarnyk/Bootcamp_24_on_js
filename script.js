@@ -1,122 +1,181 @@
-//   const book = {
-//     title: "The Last Kingdom",
-//     author: "Bernard Cornwell",
-//     genres: ["historical prose", "adventure"],
-//     isPublic: false,
-//     rating: 0,
-//     data: {
-//         a: 1,
-//         b: 2,
-//         c: 3
-//     }
-//   };
+// const users = [
+//   {
+//     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ["ipsum", "lorem"],
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//     gender: "male",
+//     age: 24,
+//   },
+//   {
+//     id: "249b6175-5c30-44c6-b154-f120923736f5",
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ["adipisicing", "irure", "velit"],
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     id: "334f8cb3-eb04-45e6-abf4-4935dd439b70",
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ["ex", "culpa", "nostrud"],
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     id: "150b00fb-dd82-427d-9faf-2879ea87c695",
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ["non", "amet", "ipsum"],
+//     gender: "male",
+//     age: 38,
+//   },
+//   {
+//     id: "e1bf46ab-7168-491e-925e-f01e21394812",
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ["lorem", "veniam", "culpa"],
+//     gender: "female",
+//     age: 39,
+//   },
+// ];
 
-//   console.log(book)
+// function a(onSuccess, onUnsuccess) {
+//   // console.log(callback)
+//   const mark = Number(prompt('What is your mark?'))
+//   if (mark >= 10) {
+//    onSuccess()
+//   } else {
+//     onUnsuccess()
+//   }
+// }
 
-// const authorName = 'author';
+// function b() {
+//   alert('It is great!')
+// }
 
-// const a = book.title
-// //  console.log(book.genres)
-// //  console.log(book['genres']);
-// console.log(book.name) // undefined
-// console.log(book[b])
+// function c() {
+//   alert('It is excellent mark!')
+// }
 
-// book.isPublic = true;
+// function d() {
+//   alert('It is bad mark!')
+// }
 
-// // // console.log(book)
-// book.genres.push('tale')
-// console.log(book)
+// a(c, d)
 
-// book.price = '10$'
+// a(function b() {
+//   alert('It is great!')
+// })
 
-// console.log(book)
+// const newUsers = []
 
-// const name = "Генрі Сибола";
-// const age = 25;
+// users.forEach(function(user, index, array) {
+//   const {id, age, ...restProps} = user;
+//   console.log(`${index + 1} - ${age}`)
+//   newUsers.push(restProps)
+// })
 
-// const user = {
-//   name: name,
-//   age: age,
+// console.log(newUsers)
+
+// const add = (a, b, c) => {
+//   // const sum = a + b + c
+//   // return sum'
+//    return a + b + c
+// }
+
+// const add = (a, b, c) => `${a} + ${b} + ${c} + 4` + '!!!'
+
+// console.log(add(1, 2, 3))
+
+// const mathOperations = (num1, num2, callback1, callback2) => {
+//   if (num1 > num2) {
+//     const result = callback1(num1, num2);
+//     return result;
+//   } else if (num2 > num1) {
+//     return callback2(num1, num2);
+//   } else {
+//     return "Enter another numbers";
+//   }
 // };
 
-// const student = {
-//     name: 'Jhon',
-//     email: 'jhon@gmail.com',
-//     homeworkResults: [],
-//     getName() {
-//         console.log(this.name)
-//     },
-//     getEmail() {
-//         console.log(this.email)
-//     },
-//     getHWResults() {
-//         console.log(this.homeworkResults)
-//     },
-//     addHomeworkResults(topic, sucess) {
-//         const item = {topic, sucess}
-//         this.homeworkResults.push(item)
-//     }
+// const add = (num1, num2) => num1 + num2;
+// const substract = (num1, num2) => num2 - num1;
+
+// const multiply = (num1, num2) => num1 * num2;
+// const divide = (num1, num2) => num2 / num1;
+
+// // console.log(mathOperations(10, 20, add, substract));
+// // console.log(mathOperations(100, 20, add, substract));
+// // console.log(mathOperations(10, 20, multiply, divide));
+// // console.log(mathOperations(100, 20, multiply, divide));
+
+// console.log(mathOperations(10, 20, (num1, num2) => num1 + num2, (num1, num2) => num2 - num1));
+
+// const newUsers = [];
+
+// users.forEach(({ id, age, ...restProps }) =>
+//   newUsers.push(restProps)
+// );
+
+// console.log(newUsers);
+
+// const a = users.forEach(({ age }) => { return age })
+// console.log(a)
+
+// const test = () => {
+//   const logger = () => console.log(123)
+//   logger()
 // }
+// test()
 
-// console.log(Object.values(student))
-
-// student.getName()
-// student.getEmail()
-// student.getHWResults()
-// student.addHomeworkResults('HTML/CSS', true)
-// student.getHWResults()
-// student.addHomeworkResults('JS', true)
-// student.getHWResults()
-
-// const book = {
-//     title: "The Last Kingdom",
-//     author: "Bernard Cornwell",
-//     genres: ["historical prose", "adventure"],
-//     rating: 8.38,
-//   };
-
-//   for (const key in book) {
-//     // // Ключ
-//     // console.log(key);
-//     // Значення властивості з таким ключем
-//     console.log(book[key]);
-//   }
-
-// const animal = {
-//     legs: 4,
-//     color: 'brown'
-//   };
-// //   animal.eyes = 'green'
-//   const dog = Object.create(animal);
-
-// //   console.log(dog)
-// //   animal.eyes = 'green';
-//   dog.name = "Манго";
-//   dog.age = 7;
-//   dog.eyes = 'grey';
-//     console.log(dog)
-// //   dog.color = 'black';
-// // //   console.log(dog); // {name: 'Манго'}
-// // //   console.log(dog.name); // 'Манго'
-// //   console.log(dog.legs); // 4
-// //   console.log(dog.eyes) //
-
-// for(const key in dog) {
-// if (!dog.hasOwnProperty(key)) {
-//     console.log(key)
-// }
-// }
-
-// const keys = Object.keys(dog)
-// console.log(keys)
-
-// const values = Object.values(dog)
-// console.log(values)
-
-// const entries = Object.entries(dog)
-// console.log(entries)
-
-const users = [{
+const users = [
+  {
     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -202,126 +261,138 @@ const users = [{
   },
 ];
 
+// const ages = users.map(({ age }) => age)
 
-// function a(users) {
-//   const newUsers = []
-//   for(let {id, name, email, ...a} of users) {
-//     name += '!'
-//     newUsers.push( {id, name, email})
+// console.log(ages)
+
+// const students = [
+//   { name: "Манго", courses: ["математика", "фізика"] },
+//   { name: "Полі", courses: ["інформатика", "математика"] },
+//   { name: "Ківі", courses: ["фізика", "біологія"] },
+// ]; 
+
+// const a = students.map(({ courses }) => courses)
+// console.log(a.flat(2))
+
+// const courses = students.flatMap(student => student.courses);
+// console.log(courses) // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія']
+
+// const uniqueCourses = courses.filter(
+//   (course, index, array) => {
+//     console.log('idx', index)
+//     console.log('idxOf', array.indexOf(course))
+//     return array.indexOf(course) === index
 //   }
-//   console.log(users)
-//   return newUsers
+// );
+
+// console.log(uniqueCourses)
+
+// // ['математика', 'фізика' , 'інформатика', 'біологія']
+
+// const richUsers = users.filter(({ balance }) => balance > 3000)
+// console.log(richUsers)
+
+// const user = users.filter(({ name, balance }) => balance > 3000 && name[0] === "S")
+// console.log(user)
+
+// // const user = users.find(({balance }) => balance > 3000)
+// // console.log(user)
+
+// const userFind = users.find(({ name, balance }) => balance > 3000 && name[0] === "S")
+// // console.log(userFind)
+// // console.log(users.indexOf(userFind))
+
+// const index = users.findIndex(({ name, balance }) => balance > 3000 && name[0] === "S")
+// console.log(index)
+
+// const result1 = users.every(({ balance }) => balance > 2000)
+// const result2 = users.every(({age}) => age >= 20 && age <=30)
+
+// // console.log(result2)
+
+// const result3 = users.some(({ eyeColor }) => eyeColor === 'green')
+// const result4 = users.some(({friends}) => friends.length > 5)
+// // console.log(result4)
+
+// const number = 10
+
+// const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+//   return previousValue + number;
+// });
+
+// console.log(total)
+
+const countSum = (array) => {
+  // const positiveNums = array.filter(elem => elem >= 0)
+  // return positiveNums.reduce((acc, elem) => acc + elem)
+  return array.filter(elem => elem >= 0).reduce((acc, elem) => acc + elem)
+}
+
+// const countSum = (array) => {
+//   return array.reduce((acc, elem) => elem > 0 ? acc + elem : acc, 0)
 // }
+console.log(countSum([-34, 1, 5, 4, -5, 7, 3, 0]))
+console.log(countSum([-34, 1, -4, -5, -40, 3, 0]))
 
-// console.log(a(users))
-//   const dataObject = {};
-// //   console.log(users[0])
-//   const keys = Object.keys(users[0])
-// //   console.log(keys)
+// const amount = users.reduce((acc, { friends }) => acc + friends.length, 0)
+// console.log(amount)
 
-//   for(const key of keys) {
-//     console.log(key)
-//     dataObject[key] = [];
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+// console.log(tags)
+
+// // Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// // Це стандартна практика, якщо callback-функція досить велика.
+
+// // Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// // то створюємо її і записуємо їй значення 0.
+// // В іншому випадку збільшуємо значення на 1.
+// const getTagStats = (acc, tag, index) => {
+//   console.log(index + 1)
+//   console.log(acc)
+//   console.log(tag)
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
 //   }
 
-//   console.log(dataObject)
+//   acc[tag] += 1;
 
-// // for (const objKey in dataObject) {
-// //   for(const user of users) {
-// //     dataObject[objKey].push(user[objKey])
-// //   }
-// // }
-
-// const u =  {
-//     id: "e1bf46ab-7168-491e-925e-f01e21394812",
-//     name: "Sheree Anthony",
-//     email: "shereeanthony@kog.com",
-//     eyeColor: "brown",
-//     friends: ["Goldie Gentry", "Briana Decker"],
-//     isActive: true,
-//     balance: 2764,
-//     skills: ["lorem", "veniam", "culpa"],
-//     gender: "female",
-//     age: 39,
-//   }
-
-// const obj1 = {a: 1, b: 2};
-// const obj2 = {a: 0, c: 3, d: 4}
-// const obj3 = {...obj2, ...obj1, p: 78}
-// console.log(obj3)
-
-// function isIncluded() {
-//   const array = Array.from(arguments)
-//   const num = array.shift()
-//   console.log(array.includes(num))
-// }
-// isIncluded(5, 2, 3, 5, 6, 8, 5)
-
-// function isIncluded(num, ...array) {
-//   console.log(array.includes(num))
-// }
-// isIncluded(1, 2, 3, 5, 6, 8, 5)
-
-// const b = [[1, 2, 3], 5]
-// const a = [...b]
-// console.log(a)
-
-// const car1 = {
-//   brand: "BMW",
-//   model: "700",
-//   a: "red",
-//   maxSpeed: 240,
-//   isNew: true,
-//   dimensions: {
-//     weight: 2000,
-//     height: 150,
-//     length: 4.2,
-//   },
+//   return acc;
 // };
 
-// const car2 = {
-//   brand: "BMW",
-//   model: "700",
-//   a: "red",
-//   maxSpeed: 240,
-//   isNew: true,
-//   dimensions: {
-//     height: 150,
-//     length: 4.2,
-//   },
-// };
+// // Початкове значення акумулятора - це порожній об'єкт {}
+// const countTags = tags => tags.reduce(getTagStats, {});
 
+// const tagCount = countTags(tags);
+// console.log(tagCount);
 
-// function createMessage({
-//   dimensions: {
-//     weight = "No info",
-//     height = "No info",
-//     length = "No info"
-//   },
-//   a: color = 'No info',
-//   maxSpeed = "No info",
-//   isNew = "No info",
+// const getSums = (array) => array.reduce((acc, num, idx) => idx === 0 ? [num] : [...acc, num + acc[idx-1]], [])
 
-// }) {
-//   const message = `
-//   Color: ${color}
-//   Max speed: ${maxSpeed}
-//   Is new: ${isNew}
-//   Weight: ${weight}
-//   `;
-//   console.log(message);
-// }
-
-// createMessage(car1);
-
-// function createRange(num1, num2) {
-//   const [min, max] = num1 < num2 ? [num1, num2] : [num2, num1]
-//   const array = [];
-//   for(let i = min; i <= max; i +=1) {
-//     array.push(i)
+// const getSums = (array) => array.reduce((acc, num, idx) => {
+//   console.log(idx+1)
+//   console.log('acc', acc)
+//   if (idx === 0) {
+//     return [num]
+//   } else {
+//     console.log('last elem', acc[idx - 1])
+//     return [...acc, num + acc[idx - 1]]
 //   }
-//   console.log(array)
-// }
 
-// createRange(5, 10)
-// createRange(12, 8)
+// }, [])
+
+// console.log(getSums([1, 2, 3, 4, 5]))// [1, 3, 6, 10, 15]
