@@ -1,0 +1,14 @@
+#root {
+    display: flex;
+    height: 100vH;
+}
+
+.first {
+width: 40%;
+background-color: antiquewhite;
+}
+
+.second {
+    width: 60%;
+    background-color: bisque;
+}

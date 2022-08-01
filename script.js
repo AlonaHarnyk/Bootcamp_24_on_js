@@ -1,142 +1,49 @@
-// // 'use strict';
+// // const list = document.querySelector('ul')
+const list = document.querySelector('.list')
+// // const list = document.querySelector('#list1')
+// // const list = document.getElementById('list1')
+// console.log(list)
+// console.log(list.parentNode)
+// console.log(list.childNodes)
+// console.log(list.children)
+// console.log(list.firstElementChild)
+// console.log(list.previousElementSibling)
+// console.log(list.nextElementSibling)
 
-// // function foo() {
-// //   console.log(this);
-// // }
+// const li = 'li'
+// const a = document.querySelector(li)
+// const elems = document.querySelectorAll('.item2')
+// // console.log(elems)
 
-// // foo(); // window без "use strict" і undefined з "use strict"
+// // const b = list.querySelectorAll('li')
+// const p = list.querySelectorAll('p')
+// console.log(p)
 
-// // const petya = {
-// //   username: "Petya",
-// //   showThis() {
-// //     console.log(this);
-// //   },
-// //   showName() {
-// //     console.log(this.username);
-// //   },
-// // };
+// console.log(list.firstElementChild.children)
+// console.log(list.firstElementChild.querySelectorAll('p'))
+// console.log(list.querySelector('li').querySelectorAll('p'))
+// console.log(list.querySelectorAll(''))
 
-// // petya.showThis(); // {username: "Petya", showThis: ƒ, showName: ƒ}
-// // petya.showName(); // 'Petya'
+// const p = document.querySelector('.sib')
 
-// // function showThis() {
-// //   console.log("this in showThis: ", this);
-// // }
+// p.classList.add('active')
 
-// // // Викликаємо у глобальному контексті
-// // showThis(); // this in showThis: Window
+// console.log(p.classList.contains('inActive'))
 
-// // const user = {
-// //   username: "Mango",
-// // };
+// p.classList.remove('active')
 
-// // Записуємо посилання на функцію у властивість об'єкта
-// // Зверніть увагу, що це не виклик - немає ()
-// // user.showContext = showThis;
+// console.log(document.querySelector('.sib').textContent = '123')
 
-// // console.log(user)
+// list.style.color = 'blue'
 
-// // const newUser = {
-// //   username: "Mango",
-// //   showContext() {
-// //     console.log("this in showThis: ", this);
-// //   }
-// // };
+// document.body.style.backgroundColor = 'tomato'
 
-// // // Викликаємо функцію в контексті об'єкта
-// // // this буде вказувати на поточний об'єкт, в контексті
-// // // якого здійснюється виклик, а не на глобальний об'єкт.
-// // newUser.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+// const btn = document.querySelector('button')
 
-// // function a() {
-// //   console.log("this in a: ", this);
-// // }
-// // a()
+// btn.setAttribute('type', 'button')
 
-// // const showThis = () => {
-// //   console.log("this in showThis: ", this);
-// // };
-
-// // // showThis(); // this in showThis: window
-
-// // const user = {
-// //   username: "Mango",
-// // };
-// // user.showContext = showThis;
-
-// // user.showContext(); // this in showThis: window
-
-// // const hotel = {
-// //   username: "Resort hotel",
-
-// //   showThis() {
-// //     function b() {
-// //       console.log(this);
-// //       const foo = () => {
-// //         // Стрілки запам'ятовують контекст під час оголошення
-// //         // з батьківської області видимості
-// //         console.log("this in foo: ", this);
-// //       };
-// //       foo();
-// //     }
-
-// //     b.call(hotel);
-// //     // const foo = () => {
-// //     //   // Стрілки запам'ятовують контекст під час оголошення
-// //     //   // з батьківської області видимості
-// //     //   console.log("this in foo: ", this);
-
-// //     // };
-// //     // foo();
-
-// //     // console.log("this in showThis: ", this);
-// //   },
-// // };
-
-// // hotel.showThis();
-// // this in foo: {username: 'Resort hotel', showThis: ƒ}
-// // this in showThis: {username: 'Resort hotel',showThis: ƒ}
+// btn.type = 'submit'
 
 
-// // function greet(clientName) {
-// //   return `${clientName}, ласкаво просимо в «${this.service}».`;
-// // }
-
-// // const steam = {
-// //   service: "Steam",
-// // };
-// // const steamGreeter = greet.bind(steam);
-// // console.log(steamGreeter("Манго")); // "Манго, ласкаво просимо в «Steam»."
-
-// // const gmail = {
-// //   service: "Gmail",
-// // };
-// // const gmailGreeter = greet.bind(gmail);
-// // gmailGreeter("Полі"); // "Полі, ласкаво просимо в «Gmail»."
-
-// class User {
-//   #email;
-
-//   constructor({ name, email }) {
-//     this.name = name;
-//     this.#email = email;
-//   }
-
-//   // Геттер email
-//   get email() {
-//     return this.#email;
-//   }
-
-//   // Сеттер email
-//   set email(newEmail) {
-//     this.#email = newEmail;
-//   }
-// }
-
-// const a = new User({ name:'test', email: 'test@ukr.net'})
-
-// a.email = '123'
-
-// console.log(a)
-
-// console.log(a.email)
+// const saveBtn = document.querySelector('[data-action="save"]');
+// console.log(saveBtn)

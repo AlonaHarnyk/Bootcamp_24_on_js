@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <svg>
-        <use></use>
-    </svg>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <p class="sib">sibling</p>
+    <ul class="list" id="list1">
+      <li>
+        <p>text1</p>
+        <p>text1</p>
+      </li>
+      <li class="item"><p>text2</p></li>
+      <li><p>text3</p></li>
+      <li><p>text4</p></li>
+      <li class="item"><p>text5</p></li>
+    </ul>
+    <ul>
+      <li class="item2"></li>
+      <li class="item2"></li>
+      <li class="item2"></li>
+    </ul>
+    <button name="option">Click</button>
+    <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+    <button type="button" data-action="save">Save</button>
+<button type="button" data-action="close">Close</button>
     <script src="./script.js"></script>
     <script src="./context.js"></script>
     <!-- <script src="./fc_protopyres.js"></script> -->
-</body>
+  </body>
 </html>
