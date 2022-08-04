@@ -39,25 +39,51 @@ let books = [
   },
 ];
 
+const rootDiv = document.querySelector("#root");
+const firstDiv = document.createElement("div");
+const secondDiv = document.createElement("div");
 
-const rootDiv = document.querySelector('#root')
-const firstDiv = document.createElement('div')
-const secondDiv = document.createElement('div')
+firstDiv.classList.add("first");
+secondDiv.classList.add("second");
 
-firstDiv.classList.add('first')
-secondDiv.classList.add('second')
+rootDiv.append(firstDiv, secondDiv);
 
-rootDiv.append(firstDiv, secondDiv)
+const title = document.createElement("h1");
+const list = document.createElement("ul");
+const addButton = document.createElement("button");
 
-const title = document.createElement('h1')
-const list = document.createElement('ul')
-const addButton = document.createElement('button')
+title.textContent = "Library";
+addButton.textContent = "ADD";
 
-title.textContent = 'Library'
-addButton.textContent = 'ADD'
+firstDiv.append(title, list, addButton);
 
-firstDiv.append(title, list, addButton)
+function renderList() {
+  const markup = books
+    .map(
+      ({ title, id }) =>
+        `<li id=${id}><p class='title'>${title}</p><button>Delete</button><button>Edit</button></li>`
+    )
+    .join("");
+  list.insertAdjacentHTML("afterbegin", markup);
+  const titles = document.querySelectorAll(".title");
+  titles.forEach((title) => title.addEventListener("click", renderPreview));
+}
 
-const markup = books.map(({title}) => `<li><p>${title}</p><button>Delete</button><button>Edit</button></li>`).join('')
+renderList();
 
-list.insertAdjacentHTML('afterbegin', markup)
+function renderPreview(event) {
+  const bookId = event.target.parentNode.id;
+  const book = books.find(({ id }) => id === bookId);
+  const markup = createPreviewMarkup(book);
+  secondDiv.innerHTML = "";
+  secondDiv.insertAdjacentHTML("afterbegin", markup);
+}
+
+function createPreviewMarkup({ title, author, img, plot }) {
+  return `<div>
+    <h2>${title}</h2>
+    <p>${author}</p>
+    <img src='${img}' alt='${title}'>
+    <p>${plot}</p>
+    </div>`;
+}

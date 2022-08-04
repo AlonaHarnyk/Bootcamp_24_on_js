@@ -1,5 +1,5 @@
 // // const list = document.querySelector('ul')
-const list = document.querySelector('.list')
+// const list = document.querySelector('.list')
 // // const list = document.querySelector('#list1')
 // // const list = document.getElementById('list1')
 // console.log(list)
@@ -44,6 +44,20 @@ const list = document.querySelector('.list')
 
 // btn.type = 'submit'
 
-
 // const saveBtn = document.querySelector('[data-action="save"]');
 // console.log(saveBtn)
+
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   console.log(event.target.elements);
+
+//   const {
+//     elements: { name, age },
+//   } = event.target;
+//   console.log(name.value);
+//   console.log(age.value);
+// }
