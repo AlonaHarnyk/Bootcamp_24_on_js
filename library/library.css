@@ -12,3 +12,7 @@ background-color: antiquewhite;
     width: 60%;
     background-color: bisque;
 }
+
+label {
+    display: block;
+}

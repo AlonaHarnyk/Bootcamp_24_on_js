@@ -61,12 +61,15 @@ function renderList() {
   const markup = books
     .map(
       ({ title, id }) =>
-        `<li id=${id}><p class='title'>${title}</p><button>Delete</button><button>Edit</button></li>`
+        `<li id=${id}><p class='title'>${title}</p><button class='delete'>Delete</button><button>Edit</button></li>`
     )
     .join("");
+  list.innerHTML = "";
   list.insertAdjacentHTML("afterbegin", markup);
   const titles = document.querySelectorAll(".title");
   titles.forEach((title) => title.addEventListener("click", renderPreview));
+  const btnDel = document.querySelectorAll(".delete");
+  btnDel.forEach((btn) => btn.addEventListener("click", deleteBook));
 }
 
 renderList();
@@ -79,11 +82,53 @@ function renderPreview(event) {
   secondDiv.insertAdjacentHTML("afterbegin", markup);
 }
 
-function createPreviewMarkup({ title, author, img, plot }) {
-  return `<div>
+function createPreviewMarkup({ title, author, img, plot, id }) {
+  return `<div id=${id} class='bookwrapper'>
     <h2>${title}</h2>
     <p>${author}</p>
     <img src='${img}' alt='${title}'>
     <p>${plot}</p>
     </div>`;
+}
+
+function deleteBook(event) {
+  const bookId = event.target.parentNode.id;
+  books = books.filter(({ id }) => bookId !== id);
+  renderList();
+  const wrapper = document.querySelector(".bookwrapper");
+  if (wrapper && wrapper.id === bookId) {
+    secondDiv.innerHTML = "";
+  }
+}
+
+addButton.addEventListener("click", addBook);
+
+function addBook() {
+  const markup = createFormMarkup();
+  secondDiv.innerHTML = "";
+  secondDiv.insertAdjacentHTML("afterbegin", markup);
+  const newBook = {
+    id: Date.now(),
+  };
+  fillObject(newBook);
+  const saveBtn = document.querySelector(".save");
+  saveBtn.addEventListener("click", saveBook);
+  function saveBook(evt) {
+    // evt.preventDefault();
+    console.log(newBook);
+  }
+}
+
+function createFormMarkup() {
+  return `<form><label>Title:<input name='title'></label>
+  <label>Author:<input name='author'></label><label>Img:<input name='img'></label><label>Plot:<input name='plot'></label><button class='save'>Save</button></form>`;
+}
+
+function fillObject(book) {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach((input) =>
+    input.addEventListener("change", (event) => {
+      book[event.target.name] = event.target.value;
+    })
+  );
 }

@@ -61,3 +61,43 @@
 //   console.log(name.value);
 //   console.log(age.value);
 // }
+
+// const p = document.querySelectorAll('p')
+// p.forEach(elem => elem.addEventListener('click', (event) => {
+//     console.log(event.currentTarget)
+//     console.log(event.target)
+//     console.log(event.target.textContent)
+// }))
+
+// const list = document.querySelector('.parent')
+// list.addEventListener('click', (event) => {
+//     console.log(event.currentTarget)
+//     console.log(event.target)
+//     console.log(event.target.textContent)
+// })
+
+// document.body.addEventListener('click', (event) => {
+//     console.log(event.currentTarget)
+//     console.log(event.target)
+//     console.log(event.target.textContent)
+// })
+
+// console.log(_)
+
+const input = document.querySelector(".lodash");
+
+// input.addEventListener('input', (event) => console.log(event.target.value))
+
+const inputHandler = (event) => console.log(event.target.value);
+
+// input.addEventListener('input', _.throttle(inputHandler, 1000))
+
+// input.addEventListener(
+//   "input",
+//   _.debounce(inputHandler, 1500, {
+//     leading: true,
+//     trailing: true,
+//   })
+// );
+
+document.addEventListener('scroll', _.throttle(() => { console.log(1) }, 300))
