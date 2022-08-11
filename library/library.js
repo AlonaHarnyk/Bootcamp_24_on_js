@@ -1,4 +1,4 @@
-let books = [
+const books = [
   {
     id: "1",
     title: `Apple. Эволюция компьютера`,
@@ -39,6 +39,12 @@ let books = [
   },
 ];
 
+if (!localStorage.getItem("books")) {
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+
+
 const rootDiv = document.querySelector("#root");
 const firstDiv = document.createElement("div");
 const secondDiv = document.createElement("div");
@@ -58,6 +64,7 @@ addButton.textContent = "ADD";
 firstDiv.append(title, list, addButton);
 
 function renderList() {
+  const books = JSON.parse(localStorage.getItem("books"));
   const markup = books
     .map(
       ({ title, id }) =>
@@ -75,6 +82,7 @@ function renderList() {
 renderList();
 
 function renderPreview(event) {
+  const books = JSON.parse(localStorage.getItem("books"));
   const bookId = event.target.parentNode.id;
   const book = books.find(({ id }) => id === bookId);
   const markup = createPreviewMarkup(book);
@@ -92,8 +100,10 @@ function createPreviewMarkup({ title, author, img, plot, id }) {
 }
 
 function deleteBook(event) {
+  let books = JSON.parse(localStorage.getItem("books"));
   const bookId = event.target.parentNode.id;
   books = books.filter(({ id }) => bookId !== id);
+  localStorage.setItem("books", JSON.stringify(books));
   renderList();
   const wrapper = document.querySelector(".bookwrapper");
   if (wrapper && wrapper.id === bookId) {
@@ -108,14 +118,24 @@ function addBook() {
   secondDiv.innerHTML = "";
   secondDiv.insertAdjacentHTML("afterbegin", markup);
   const newBook = {
-    id: Date.now(),
+    id: `${Date.now()}`,
   };
   fillObject(newBook);
   const saveBtn = document.querySelector(".save");
   saveBtn.addEventListener("click", saveBook);
   function saveBook(evt) {
-    // evt.preventDefault();
-    console.log(newBook);
+    evt.preventDefault();
+    if (newBook.title && newBook.author && newBook.img && newBook.plot) {
+      const books = JSON.parse(localStorage.getItem("books"));
+      books.push(newBook);
+      localStorage.setItem("books", JSON.stringify(books));
+      renderList();
+      const markup = createPreviewMarkup(newBook);
+      secondDiv.innerHTML = "";
+      secondDiv.insertAdjacentHTML("afterbegin", markup);
+    } else {
+      alert("Fill all fields, please");
+    }
   }
 }
 

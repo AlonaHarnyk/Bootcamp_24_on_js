@@ -10,6 +10,7 @@
 // console.log(list.previousElementSibling)
 // console.log(list.nextElementSibling)
 
+
 // const li = 'li'
 // const a = document.querySelector(li)
 // const elems = document.querySelectorAll('.item2')
@@ -84,20 +85,42 @@
 
 // console.log(_)
 
-const input = document.querySelector(".lodash");
+// const input = document.querySelector(".lodash");
 
-// input.addEventListener('input', (event) => console.log(event.target.value))
+// // input.addEventListener('input', (event) => console.log(event.target.value))
 
-const inputHandler = (event) => console.log(event.target.value);
+// const inputHandler = (event) => console.log(event.target.value);
 
-// input.addEventListener('input', _.throttle(inputHandler, 1000))
+// // input.addEventListener('input', _.throttle(inputHandler, 1000))
 
-// input.addEventListener(
-//   "input",
-//   _.debounce(inputHandler, 1500, {
-//     leading: true,
-//     trailing: true,
-//   })
-// );
+// // input.addEventListener(
+// //   "input",
+// //   _.debounce(inputHandler, 1500, {
+// //     leading: true,
+// //     trailing: true,
+// //   })
+// // );
 
-document.addEventListener('scroll', _.throttle(() => { console.log(1) }, 300))
+// document.addEventListener('scroll', _.throttle(() => { console.log(1) }, 300))
+
+// localStorage.setItem("theme", "light");
+// console.log(localStorage.getItem('theme'))
+
+
+// localStorage.setItem("name", "Ivan");
+
+// // localStorage.removeItem('name')
+
+// // localStorage.clear()
+
+// const data = [1, 2, 3]
+// const obj = {a: 5}
+
+// localStorage.setItem('data', JSON.stringify(data))
+// localStorage.setItem('obj', JSON.stringify(obj))
+
+
+// console.log(JSON.parse(localStorage.getItem('obj')))
+
+
+// console.log(localStorage.getItem('key'))
