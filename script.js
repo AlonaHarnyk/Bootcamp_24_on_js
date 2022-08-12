@@ -1,126 +1,119 @@
-// // const list = document.querySelector('ul')
-// const list = document.querySelector('.list')
-// // const list = document.querySelector('#list1')
-// // const list = document.getElementById('list1')
-// console.log(list)
-// console.log(list.parentNode)
-// console.log(list.childNodes)
-// console.log(list.children)
-// console.log(list.firstElementChild)
-// console.log(list.previousElementSibling)
-// console.log(list.nextElementSibling)
+// const DELAY = 3000
 
+// console.log('before')
 
-// const li = 'li'
-// const a = document.querySelector(li)
-// const elems = document.querySelectorAll('.item2')
-// // console.log(elems)
-
-// // const b = list.querySelectorAll('li')
-// const p = list.querySelectorAll('p')
-// console.log(p)
-
-// console.log(list.firstElementChild.children)
-// console.log(list.firstElementChild.querySelectorAll('p'))
-// console.log(list.querySelector('li').querySelectorAll('p'))
-// console.log(list.querySelectorAll(''))
-
-// const p = document.querySelector('.sib')
-
-// p.classList.add('active')
-
-// console.log(p.classList.contains('inActive'))
-
-// p.classList.remove('active')
-
-// console.log(document.querySelector('.sib').textContent = '123')
-
-// list.style.color = 'blue'
-
-// document.body.style.backgroundColor = 'tomato'
-
-// const btn = document.querySelector('button')
-
-// btn.setAttribute('type', 'button')
-
-// btn.type = 'submit'
-
-// const saveBtn = document.querySelector('[data-action="save"]');
-// console.log(saveBtn)
-
-// const form = document.querySelector("form");
-
-// form.addEventListener("submit", handleSubmit);
-
-// function handleSubmit(event) {
-//   event.preventDefault();
-//   console.log(event.target.elements);
-
-//   const {
-//     elements: { name, age },
-//   } = event.target;
-//   console.log(name.value);
-//   console.log(age.value);
+// const logger = (a, b) => {
+//     console.log(a)
+//     console.log(b)
 // }
 
-// const p = document.querySelectorAll('p')
-// p.forEach(elem => elem.addEventListener('click', (event) => {
-//     console.log(event.currentTarget)
-//     console.log(event.target)
-//     console.log(event.target.textContent)
-// }))
+// // logger(5, 10)
 
-// const list = document.querySelector('.parent')
-// list.addEventListener('click', (event) => {
-//     console.log(event.currentTarget)
-//     console.log(event.target)
-//     console.log(event.target.textContent)
-// })
+// // const timerId = setTimeout(logger, DELAY, 5, 10)
 
-// document.body.addEventListener('click', (event) => {
-//     console.log(event.currentTarget)
-//     console.log(event.target)
-//     console.log(event.target.textContent)
-// })
+// const timerId2 = setInterval(logger, 1000, 20, 50)
 
-// console.log(_)
+// console.log('after')
 
-// const input = document.querySelector(".lodash");
+// // clearTimeout(timerId);
 
-// // input.addEventListener('input', (event) => console.log(event.target.value))
+// setTimeout(() => clearInterval(timerId2), 10000)
 
-// const inputHandler = (event) => console.log(event.target.value);
+// // logger(5, 10)
 
-// // input.addEventListener('input', _.throttle(inputHandler, 1000))
+// console.log('a')
+// setTimeout(() => console.log('b'), 500)
+// setTimeout(() => console.log('h'), 0)
+// setTimeout(() => console.log('c'), 100)
+// console.log('j')
+// setTimeout(() => console.log('d'), 1000)
+// setTimeout(() => console.log('e'), 500)
+// console.log('f')
 
-// // input.addEventListener(
-// //   "input",
-// //   _.debounce(inputHandler, 1500, {
-// //     leading: true,
-// //     trailing: true,
-// //   })
-// // );
+// class CountdownTimer {
+//   constructor({ selector, targetDate }) {
+//     this.targetDate = targetDate;
+//     this.daysSpan = document.querySelector(`${selector} [data-value="days"]`);
+//     this.hoursSpan = document.querySelector(`${selector}  [data-value="hours"]`);
+//     this.minsSpan = document.querySelector(`${selector} [data-value="mins"]`);
+//     this.secsSpan = document.querySelector(`${selector} [data-value="secs"]`);
+//     this.updateTimer()
+//   }
 
-// document.addEventListener('scroll', _.throttle(() => { console.log(1) }, 300))
+//   updateTimer() {
+//     setInterval(() => {
+//       const currentTime = Date.now();
+//       const delta = this.targetDate - currentTime;
+//       const days = Math.floor(delta / (1000 * 60 * 60 * 24));
+//       const hours = Math.floor(
+//         (delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60
+//       ));
+//       const minutes = Math.floor(
+//         (delta % (1000 * 60 * 60)) / (1000 * 60)
+//       );
+//       const seconds = Math.floor(
+//         (delta % (1000 * 60) / 1000)
+//       );
+//       this.daysSpan.textContent = days;
+//       this.hoursSpan.textContent = hours;
+//       this.minsSpan.textContent = minutes;
+//       this.secsSpan.textContent = seconds;
+//     }, 1000);
+//   }
+// }
 
-// localStorage.setItem("theme", "light");
-// console.log(localStorage.getItem('theme'))
+// const timer1 = new CountdownTimer({
+//   selector: "#timer-1",
+//   targetDate: new Date("Sep 1, 2022"),
+// });
+
+// const timer2 = new CountdownTimer({
+//   selector: "#timer-2",
+//   targetDate: new Date("Oct 1, 2022"),
+// });
+
+// const timer3 = new CountdownTimer({
+//   selector: "#timer-3",
+//   targetDate: new Date("Dec 31, 2022"),
+// });
 
 
-// localStorage.setItem("name", "Ivan");
+// Write a function which returns a day number that was some amount of days ago from the passed date.
 
-// // localStorage.removeItem('name')
+// const getPastDay = (date, days) => {
+//     const MS_PER_DAY = 1000 * 60 * 60 * 24
+//     const msPerDays = MS_PER_DAY * days
+//     // const ms = date.getTime()
+//     const delta = date - msPerDays
+//     return new Date(delta).getDate()
+// }
 
-// // localStorage.clear()
-
-// const data = [1, 2, 3]
-// const obj = {a: 5}
-
-// localStorage.setItem('data', JSON.stringify(data))
-// localStorage.setItem('obj', JSON.stringify(obj))
+// const date = new Date(2020, 0, 2);
+// console.log(getPastDay(date, 1)); // 1, (1 Jan 2020)
+// console.log(getPastDay(date, 2)); // 31, (31 Dec 2019)
+// console.log(getPastDay(date, 365)); // 2, (2 Jan 2019)
 
 
-// console.log(JSON.parse(localStorage.getItem('obj')))
 
 
-// console.log(localStorage.getItem('key'))
+// Write a function that formats a date in such format "YYYY/MM/DD HH:mm".
+
+// const formatDate = date => {
+//     const formatNumber = number => {
+//         if (number < 10) {
+//             return `0${number}`
+//         } 
+//         return number
+//     }
+
+//     const year = date.getFullYear();
+//     const month = formatNumber(date.getMonth() + 1)
+//     const day = formatNumber(date.getDate());
+//     const hours = formatNumber(date.getHours());
+//     const minutes = formatNumber(date.getMinutes());
+//     return `${year}/${month}/${day} ${hours}:${minutes}`
+
+// }
+
+// console.log(formatDate(new Date('6/15/2019 09:15:00')) )// "2019/06/15 09:15"
+// console.log(formatDate(new Date())) // gets current local time

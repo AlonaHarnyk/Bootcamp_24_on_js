@@ -133,6 +133,7 @@ function addBook() {
       const markup = createPreviewMarkup(newBook);
       secondDiv.innerHTML = "";
       secondDiv.insertAdjacentHTML("afterbegin", markup);
+      setTimeout(() => alert('Book was succesfully added!'), 700)
     } else {
       alert("Fill all fields, please");
     }
